@@ -1,0 +1,88 @@
+@charset "utf-8";
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+/* 공통 스타일(모듈) */
+
+.clearfix::after {
+  content: "";
+  /* 가상요소는 inline이기 때문에 block처리를 해줘야 clear명령어를 쓸 수 있다 */
+  display: block;
+  clear: both;
+}
+
+
+/* 기본레이아웃 */
+
+.container {
+  background-color: silver;
+}
+
+.header, .visual, .main-content, .slogan, .footer {
+  width: 940px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: yellow;
+  height: 110px;
+}
+
+.visual {
+  background-color: pink;
+  height: 120px;
+}
+
+.main-content {
+  background-color: blue;
+  padding: 30px 15px;
+  min-height: 400px;
+  /* 1. flex배치방법  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  height: 60vh;
+  */
+}
+
+.group {
+  margin: 0 15px;
+}
+
+.group1 {
+  background-color: maroon;
+  width: 250px;
+  float: left;
+}
+
+.group2 {
+  background-color: teal;
+  width: 380px;
+  float: left;
+}
+
+.group3 {
+  background-color: tomato;
+  width: 190px;
+  float: left;
+}
+
+.slogan {
+  background-color: orange;
+  padding: 15px 0;
+}
+
+.footer-bg {
+  background-color: purple;
+}
+
+.footer {
+  background-color: skyblue;
+  padding: 15px 0;
+}
