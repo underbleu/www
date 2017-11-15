@@ -86,12 +86,14 @@ a:hover, a:focus {
   text-transform: uppercase;
   position: relative;
   right: -10px;
-  float: right;
+  font-size: 0;
+  text-align: right;
 }
 .member li {
   padding: 10px 0;
   background-color: aqua;
-  float: left;
+  display: inline-block;
+  font-size: 1.4rem;
 }
 .member li:nth-child(n+2)::before {
   content: ":";
