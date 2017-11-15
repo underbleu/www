@@ -5,7 +5,6 @@
   box-sizing: border-box;
 }
 
-
 /* CSS Reset */
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -16,18 +15,15 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font: inherit;
   vertical-align: baseline;
 }
-
 ul {
   list-style: none;
 }
-
 
 /* 본문 스타일 */
 
 html {
   font-size: 10px;
 }
-
 body {
   font-family: 'Noto Sans Regular', sans-serif;
   font-size: 1.4rem;
@@ -35,23 +31,19 @@ body {
   background-color: white;
 }
 
-
 /* 링크 스타일 */
 
 a {
   color: inherit;
   text-decoration: none;
 }
-
 a:link, a:visited {
   color: inherit;
   text-decoration: none;
 }
-
 a:hover, a:focus {
   color: #f00;
 }
-
 
 /* 공통 스타일 */
 
@@ -61,18 +53,15 @@ a:hover, a:focus {
   clear: both;
 }
 
-
 /* 기본레이아웃 */
 
 .container {
   background-color: silver;
 }
-
 .header, .visual, .main-content, .slogan, .footer {
   width: 940px;
   margin: 0 auto;
 }
-
 
 /* 헤더 */
 
@@ -80,7 +69,6 @@ a:hover, a:focus {
   background-color: #fff;
   position: relative;
 }
-
 
 /* 로고 */
 
@@ -91,7 +79,6 @@ a:hover, a:focus {
   left: 65px;
 }
 
-
 /* 멤버 링크 */
 
 .member {
@@ -99,50 +86,23 @@ a:hover, a:focus {
   text-transform: uppercase;
   position: relative;
   right: -10px;
-  /* 1번
   display: flex;
-  justify-content: flex-end; */
-  /* 2번 
-  float: right; */
-  /* 3번 */
-  float: right;
-  font-size: 0;
-  text-align: right;
+  justify-content: flex-end;
 }
-
 .member li {
   padding: 10px 0;
-  /* 2번
-  float: left; */
   background-color: aqua;
-  /* 3번 */
-  display: inline-block;
-  font-size: 1.4rem;
 }
-
-
-/* 
-.member li::before {
-  content: ":";
-}
-
-.member li:first-child::before {
-  content: "";
-} */
-
 .member li:nth-child(n+2)::before {
   content: ":";
 }
-
 .member a {
   background-color: lime;
   padding: 8px 10px;
 }
-
 .navigation {
   clear: both;
 }
-
 
 /* 비주얼 */
 
@@ -151,51 +111,47 @@ a:hover, a:focus {
   height: 120px;
 }
 
+/* 메인 콘텐츠 */
+
 .main-content {
   background-color: blue;
   padding: 30px 15px;
   min-height: 400px;
-  /* 1. flex배치방법  
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 30px;
   height: 60vh;
-  */
 }
-
 .group {
   margin: 0 15px;
 }
-
 .group1 {
   background-color: maroon;
   width: 250px;
-  float: left;
 }
-
 .group2 {
   background-color: teal;
   width: 380px;
-  float: left;
 }
-
 .group3 {
   background-color: tomato;
   width: 190px;
-  float: left;
 }
+
+/* 슬로건 */
 
 .slogan {
   background-color: orange;
   padding: 15px 0;
 }
 
+/* 푸터 */
+
 .footer-bg {
   background-color: purple;
 }
-
 .footer {
   background-color: skyblue;
   padding: 15px 0;
