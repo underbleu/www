@@ -86,12 +86,12 @@ a:hover, a:focus {
   text-transform: uppercase;
   position: relative;
   right: -10px;
-  display: flex;
-  justify-content: flex-end;
+  float: right;
 }
 .member li {
   padding: 10px 0;
   background-color: aqua;
+  float: left;
 }
 .member li:nth-child(n+2)::before {
   content: ":";
@@ -117,12 +117,6 @@ a:hover, a:focus {
   background-color: blue;
   padding: 30px 15px;
   min-height: 400px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px;
-  height: 60vh;
 }
 .group {
   margin: 0 15px;
@@ -130,14 +124,17 @@ a:hover, a:focus {
 .group1 {
   background-color: maroon;
   width: 250px;
+  float: left;
 }
 .group2 {
   background-color: teal;
   width: 380px;
+  float: left;
 }
 .group3 {
   background-color: tomato;
   width: 190px;
+  float: left;
 }
 
 /* 슬로건 */
