@@ -9,6 +9,7 @@
 
 <body>
   <div class="container">
+    <a href="#content" class="a11y">본문 바로가기</a>
     <header class="header">
       <h1 class="logo">
         <a href="#"><img src="images/logo.png" alt="Web Cafe"></a>
@@ -23,7 +24,7 @@
       <nav class="navigation">
         <h2 class="readable-hidden">메인 메뉴</h2>
         <ul class="main-menu">
-          <li>
+          <li tabindex="0">
             <span>HTML에 대해</span>
             <ul class="sub-menu about-html">
               <li><a href="#">HTML5 소개</a></li>
@@ -80,7 +81,7 @@
       </nav>
     </header>
     <div class="visual">비주얼</div>
-    <main class="main-content clearfix">
+    <main id="content" class="main-content clearfix">
       <div class="group group1">그룹1</div>
       <div class="group group2">그룹2</div>
       <div class="group group3">그룹3</div>
@@ -89,7 +90,7 @@
       <h2 class="slogan-heading">슬로건</h2>
     </article>
     <div class="footer-bg">
-      <!-- 디자인요소 고려하여 div > footer로 빼기 -->
+      <!-- 디자인요소 고려하여 div > footer로 -->
       <footer class="footer">푸터</footer>
     </div>
   </div>
