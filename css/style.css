@@ -1,6 +1,6 @@
 @charset "utf-8";
 @import url("./normalize.css");
-@import url("./font.css");
+@import url("./fonts.css");
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -45,6 +45,38 @@ a:hover, a:focus {
   color: #f00;
 }
 
+/* 숨김 콘텐츠 */
+
+.readable-hidden, .a11y {
+  /* 1번 display: none; */
+  /* 2번 visibility: hidden; */
+  /* 3번 position: absolute;
+  left: -9999em; */
+  /* 4번 */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0);
+}
+
+/* 건너뛰기 링크 */
+
+.a11y:focus {
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  height: auto;
+  margin: 0;
+  clip: rect(auto, auto, auto, auto);
+  background-color: #000;
+  color: white;
+  padding: 5px 10px;
+  z-index: 10;
+}
+
 /* 공통 스타일 */
 
 .clearfix::after {
@@ -68,30 +100,30 @@ a:hover, a:focus {
 .header {
   background-color: #fff;
   position: relative;
+  padding: 0 30px 30px 30px;
+  border-radius: 0 0 15px 15px;
 }
 
 /* 로고 */
 
 .logo {
-  background-color: darkgreen;
   position: absolute;
-  top: 45px;
+  top: 47px;
   left: 65px;
 }
 
 /* 멤버 링크 */
 
 .member {
-  background-color: yellow;
   text-transform: uppercase;
-  position: relative;
-  right: -10px;
   font-size: 0;
   text-align: right;
+  /* position: relative;
+  right: -10px; */
+  transform: translateX(10px);
 }
 .member li {
   padding: 10px 0;
-  background-color: aqua;
   display: inline-block;
   font-size: 1.4rem;
 }
@@ -99,11 +131,54 @@ a:hover, a:focus {
   content: ":";
 }
 .member a {
-  background-color: lime;
   padding: 8px 10px;
 }
-.navigation {
+
+/* .member a:focus {
+  outline: 2px dotted red;
+  outline-offset: -5px;
+} */
+
+
+/* 여기 필기해야해 */
+
+
+/* .navigation {
   clear: both;
+} */
+
+
+/* 메인메뉴 */
+
+.main-menu {
+  background: #e27a2f linear-gradient(to bottom, #e04f2f 1%, #e27a2f 30%, #e27a2f 70%, #e04f2f 100%);
+  background-color: #e27a2f;
+  border-top: 2px solid #000;
+  border-radius: 0 0 5px 5px;
+  height: 47px;
+  padding-left: 225px;
+}
+.main-menu>li {
+  float: left;
+  line-height: 45px;
+}
+.main-menu span {
+  display: block;
+  font-size: 1.6rem;
+  font-family: 'Noto Sans Bold';
+  color: #fff;
+  padding: 0 20px;
+  border-left: 2px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  text-shadow: 1px 0 0 #000, 0 1px 0 #000;
+}
+.main-menu span:hover, .main-menu>li:focus span {
+  color: #ff0;
+}
+.sub-menu {
+  background-color: yellow;
+  position: absolute;
+  display: none;
 }
 
 /* 비주얼 */
