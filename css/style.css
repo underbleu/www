@@ -56,9 +56,12 @@ a:hover, a:focus {
   position: absolute;
   width: 1px;
   height: 1px;
-  overflow: hidden;
   margin: -1px;
+  overflow: hidden;
+  /* 안전장치 
   clip: rect(0, 0, 0, 0);
+ font-size: 0;
+  line-height: 0; */
 }
 
 /* 건너뛰기 링크 */
@@ -118,8 +121,10 @@ a:hover, a:focus {
   text-transform: uppercase;
   font-size: 0;
   text-align: right;
-  /* position: relative;
+  /* CSS2
+  position: relative;
   right: -10px; */
+  /* CSS3 (IE11+) */
   transform: translateX(10px);
 }
 .member li {
@@ -131,22 +136,9 @@ a:hover, a:focus {
   content: ":";
 }
 .member a {
+  /* outline이 잘리지 않게 1px 여백를 둔 설계 */
   padding: 8px 10px;
 }
-
-/* .member a:focus {
-  outline: 2px dotted red;
-  outline-offset: -5px;
-} */
-
-
-/* 여기 필기해야해 */
-
-
-/* .navigation {
-  clear: both;
-} */
-
 
 /* 메인메뉴 */
 
@@ -176,14 +168,17 @@ a:hover, a:focus {
   cursor: pointer;
   text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000;
 }
-.main-menu span:hover::after, .main-menu>li:focus span::after {
+.main-menu>li:hover span, .main-menu>li:focus span {
+  color: #ff0;
+}
+.main-menu>li:hover span::after, .main-menu>li:focus span::after {
   content: "";
   border-top: 2px solid #000;
   display: block;
 }
-.main-menu span:hover, .main-menu>li:focus span {
-  color: #ff0;
-}
+
+/* 서브메뉴 */
+
 .sub-menu {
   position: absolute;
   top: 47px;
