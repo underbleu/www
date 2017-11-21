@@ -1,7 +1,9 @@
 $(document).ready(function() {
   var menu = $('.main-menu > li');
-  var box = $('.box');
+  var tab = $('.notice-heading, .pds-heading');
+  // var box = $('.box');
 
+  // 메인메뉴 
   menu.hover(function() {
     $(this).find('.sub-menu').toggleClass('menu-act');
   });
@@ -10,9 +12,15 @@ $(document).ready(function() {
     $(this).find('.sub-menu').addClass('menu-act');
   });
 
-  box.click(function() {
-    $(this).toggleClass('box-act');
+  // 탭메뉴
+  tab.on('click focusin', function() {
+    $(this).parent().addClass('board-act').siblings().removeClass('board-act');
   });
+
+  // 클릭 애니메이션
+  // box.click(function() {
+  //   $(this).toggleClass('box-act');
+  // });
 });
 
 // $(document).ready(function() {
