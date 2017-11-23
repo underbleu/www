@@ -88,6 +88,20 @@ a:hover, a:focus {
   display: block;
   clear: both;
 }
+.title-color {
+  font-family: 'Noto Sans Bold', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.title-color span {
+  color: orangered;
+}
+.btn-more::before {
+  content: "\e802";
+  font-family: "fontello";
+  color: hsla(120, 100%, 30%, 1);
+  margin-right: 3px;
+}
 
 /* 기본레이아웃 */
 
@@ -668,12 +682,6 @@ a:hover, a:focus {
   right: -8px;
   padding: 8px;
 }
-.notice-more::before, .pds-more::before {
-  content: "\e802";
-  font-family: "fontello";
-  color: hsla(120, 100%, 30%, 1);
-  margin-right: 3px;
-}
 
 /* 10점 */
 
@@ -774,8 +782,7 @@ a:hover, a:focus {
 .news-heading+a:hover, .news-heading+a:focus {
   color: inherit;
 }
-
-/* .news-item {
+.news-item {
   margin-top: 30px;
   padding-left: 130px;
   position: relative;
@@ -795,53 +802,10 @@ a:hover, a:focus {
   text-align: center;
 }
 .news-item img {
-margin-bottom: 15px;
-box-shadow: 0 15px 15px 2px rgba(0, 0, 0, .2);
-}
-*/
-
-
-/* Grid 배치 */
-
-.news-item {
-  background-color: yellow;
-  margin-top: 30px;
-  display: grid;
-  grid-template: 20px 20px 1fr / 130px 1fr;
-  grid-template-areas: "thumbnail headline" "thumbnail time" "thumbnail brief";
-  /* grid-template-rows: 20px 20px 1fr; 
-  grid-template-columns: 130px 1fr;*/
-}
-.news-item h3 {
-  font-weight: 700;
-  grid-area: headline;
-  /* grid-column: 2; */
-  /* grid-column-start: 2;
-  grid-row-start: 1; */
-}
-.news-item time {
-  grid-area: time;
-  /* grid-area: 2 / 2; */
-  /* grid-column-start: 2;
-  grid-row-start: 2; */
-}
-.news-item p {
-  grid-area: brief;
-  /* grid-area: 3 / 2; */
-  /* grid-row-start: 3;
-  grid-column-start: 2; */
-}
-.news-item figure {
-  grid-area: thumbnail;
-  /* grid-area: 1 / 1 / 4 / 2; */
-  /* grid-column-start: 1;
-  grid-column-end: 1; */
-}
-.news-item img {
   box-shadow: 0 15px 15px 2px rgba(0, 0, 0, .2);
 }
 .news-item figcaption {
-  margin-top: 10px;
+  margin-top: 15px;
   background-color: greenyellow;
 }
 .news-more {
@@ -850,14 +814,33 @@ box-shadow: 0 15px 15px 2px rgba(0, 0, 0, .2);
   right: -8px;
   padding: 8px;
 }
-.news-more::before {
-  content: "\e802";
-  font-family: "fontello";
-  color: hsla(120, 100%, 30%, 1);
-  margin-right: 3px;
-}
 
-/* .news {
+/* Grid 배치방법
+
+.news-item {
+  background-color: yellow;
+  margin-top: 30px;
+  display: grid;
+  grid-template: 20px 20px 1fr / 130px 1fr;
+  grid-template-areas: "thumbnail headline" "thumbnail time" "thumbnail brief";
+}
+.news-item h3 {
+  font-weight: 700;
+  grid-area: headline;
+}
+.news-item time {
+  grid-area: time;
+}
+.news-item p {
+  grid-area: brief;
+}
+.news-item figure {
+  grid-area: thumbnail;
+}*/
+
+
+/* 내가한 것
+.news {
   background-color: beige;
   position: relative;
 }
@@ -922,6 +905,82 @@ box-shadow: 0 15px 15px 2px rgba(0, 0, 0, .2);
   font-family: "fontello";
   color: hsla(120, 100%, 30%, 1);
   margin-right: 3px;
+} */
+
+
+/* 신규이벤트 */
+
+.event-related {
+  background: #eee linear-gradient(to bottom, #eee, #ccc);
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+.event {
+  position: relative;
+  border-bottom: 1px solid #aaa;
+}
+.event p {
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+.event img {
+  box-shadow: 8px 8px 0 0 rgba(0, 0, 0, .3);
+}
+.btn-event {
+  position: absolute;
+  top: 3px;
+  right: 0;
+}
+.btn-event button {
+  /* 구체성 11점 */
+  float: left;
+  width: 19px;
+  height: 18px;
+  padding-top: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  /* background속기법이 아닌 기본문법 사용 */
+  background-color: #fff;
+  background-image: url("images/back_forward.png");
+  background-repeat: no-repeat;
+}
+.btn-event-next {
+  /* 구체성 10점 */
+  background-position: 100% 0;
+  margin-left: 5px;
+}
+
+/* 관련사이트 */
+
+.related {
+  margin-top: 10px;
+}
+.related-list {
+  background-color: white;
+  height: 25px;
+  overflow: hidden;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  transition: padding 1s, height 2s;
+}
+.related-list:hover, .list-act {
+  padding: 10px 0;
+  height: 145px;
+}
+.related-list li {
+  padding: 0 5px;
+}
+.related-list a {
+  /* 한줄의 영역을 다 차지 해야하기 때문에 block */
+  display: block;
+  line-height: 23px;
+  padding-left: 2em;
+  background-color: pink;
+}
+
+/* .related-list a:focus {
+  outline-offset: 50px;
 } */
 
 
