@@ -382,6 +382,9 @@ a:hover, a:focus {
   float: left;
 }
 
+/* 메인 콘텐츠 공통 스타일 */
+
+
 /* 로그인 */
 
 .login {
@@ -518,7 +521,6 @@ a:hover, a:focus {
   word-break: break-all;
 }
 .term-list-thumbnail {
-  background-color: pink;
   float: left;
 }
 
@@ -806,7 +808,6 @@ a:hover, a:focus {
 }
 .news-item figcaption {
   margin-top: 15px;
-  background-color: greenyellow;
 }
 .news-more {
   position: absolute;
@@ -965,7 +966,7 @@ a:hover, a:focus {
   transition: padding 1s, height 2s;
 }
 .related-list:hover, .list-act {
-  padding: 10px 0;
+  padding: 15px 0;
   height: 145px;
 }
 .related-list li {
@@ -976,11 +977,120 @@ a:hover, a:focus {
   display: block;
   line-height: 23px;
   padding-left: 2em;
-  background-color: pink;
 }
 
 /* .related-list a:focus {
   outline-offset: 50px;
+} */
+
+
+/* 인기사이트 */
+
+.favorite {
+  background: #eee linear-gradient(to bottom, #eee, #ccc);
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  margin-top: 20px;
+  padding: 10px;
+  position: relative;
+}
+.favorite-list {
+  overflow: hidden;
+}
+.favorite-list li {
+  counter-increment: number;
+  margin-top: 5px;
+  position: relative;
+}
+.favorite-list li::before {
+  content: counter(number, decimal);
+  color: white;
+  background-color: #666;
+  border-radius: 3px;
+  padding: 0 5px;
+  font-size: 1.2rem;
+  margin-right: 8px;
+}
+.favorite-list em {
+  background-image: url("images/rank.png");
+  background-repeat: no-repeat;
+  width: 9px;
+  height: 11px;
+  padding-top: 11px;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.down {
+  background-position: 0 100%;
+}
+.stop {
+  background-position: 0 50%;
+}
+.favorite-more {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  padding: 8px;
+}
+
+/* .favorite-list {
+  overflow: hidden;
+  line-height: 24px;
+}
+.favorite-list li {
+  background-color: beige;
+  border: 1px solid black;
+  position: relative;
+}
+.favorite-list li::before {
+  content: "1";
+  line-height: 20px;
+  text-align: center;
+  background-color: #777;
+  border-radius: 2px;
+  color: white;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+.favorite-list .no2::before {
+  content: "2";
+}
+.favorite-list .no3::before {
+  content: "3";
+}
+.favorite-list .no4::before {
+  content: "4";
+}
+.favorite-list .up, .favorite-list .down, .favorite .stop {
+  background-image: url("images/rank.png");
+  background-repeat: no-repeat;
+  height: 11px;
+  width: 9px;
+  padding-top: 11px;
+  overflow: hidden;
+  line-height: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
+.favorite-list .down {
+  background-position: 0 100%;
+}
+.favorite-list .stop {
+  background-position: 0 50%;
+}
+.favorite-more {
+  background-color: lime;
+  padding: 5px 10px;
+  position: absolute;
+  top: 5px;
+  right: 0px;
 } */
 
 
