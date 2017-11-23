@@ -109,7 +109,7 @@ a:hover, a:focus {
   /* background-image: url("images/bg_flower.png"), linear-gradient(to bottom, #aaa 0%, #eee 50%, #fff 100%);
   background-repeat: no-repeat, repeat;
   background-position: 50% 0, 0 0; */
-  background: url("images/bg_flower.png") no-repeat 50% 0, linear-gradient(to bottom, #aaa 0%, #eee 50%, #fff 100%) repeat 0 0;
+  background: url("images/bg_flower.png") no-repeat 50% 0, linear-gradient(to bottom, #aaa 0%, #eee 30%, #fff 70%, #fff 100%) repeat 0 0;
 }
 .header, .visual, .main-content, .slogan, .footer {
   width: 940px;
@@ -1097,9 +1097,66 @@ a:hover, a:focus {
 /* 슬로건 */
 
 .slogan {
+  padding: 15px 70px 15px 180px;
+  position: relative;
+}
+.slogan-heading {
+  width: 110px;
+  height: 83px;
+  position: absolute;
+  bottom: -25px;
+  left: 35px;
+  padding: 30px;
+}
+.slogan-heading::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("images/coffee.png");
+}
+.slogan-content {
+  color: #a09874;
+}
+.slogan-content q {
+  font-weight: 700;
+}
+.slogan-content q::before {
+  font-size: 3rem;
+  position: relative;
+  top: 3px;
+}
+.slogan-content q::after {
+  content: "";
+}
+
+/* 망함.ㅠㅠ
+.slogan {
   background-color: orange;
   padding: 15px 0;
+  padding: 50px 120px 20px 180px;
 }
+.slogan-heading {
+  position: relative;
+  float: left;
+  background-color: pink;
+  left: 40px;
+}
+.slogan-heading::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  background: url("images/coffee.png");
+  background-color: aqua;
+  position: absolute;
+}
+.slogan q {
+  font-weight: 700;
+} */
+
 
 /* 푸터 */
 
