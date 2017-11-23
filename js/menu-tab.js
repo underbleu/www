@@ -1,7 +1,8 @@
 $(document).ready(function() {
   var menu = $('.main-menu > li');
   var tab = $('.notice-heading, .pds-heading');
-  // var box = $('.box');
+  var related = $('.related-list');
+  var last = $('.related-list li:last-child  a');
 
   // 메인메뉴 
   menu.hover(function() {
@@ -17,24 +18,11 @@ $(document).ready(function() {
     $(this).parent().addClass('board-act').siblings().removeClass('board-act');
   });
 
-  // 클릭 애니메이션
-  // box.click(function() {
-  //   $(this).toggleClass('box-act');
-  // });
+  // 관련 사이트
+  related.focusin(function() {
+    $(this).addClass('list-act');
+  });
+  last.focusout(function() {
+    $(this).parents().removeClass('list-act');
+  });
 });
-
-// $(document).ready(function() {
-//   var menu = $('.main-menu > li');
-//   var subMenu = $('.sub-menu');
-//   var last = $('.sub-menu li:last-child a');
-
-//   menu.hover(function() {
-//     $(this).find('.sub-menu').toggleClass('menu-act');
-//   });
-//   menu.focusin(function() {
-//     $(this).find('.sub-menu').addClass('menu-act');
-//   });
-//   last.focusout(function() {
-//     $(this).parents('.sub-menu').removeClass('menu-act');
-//   });
-// });
