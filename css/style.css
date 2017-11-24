@@ -37,10 +37,6 @@ a {
   color: inherit;
   text-decoration: none;
 }
-a:link, a:visited {
-  color: inherit;
-  text-decoration: none;
-}
 a:hover, a:focus {
   color: #f00;
 }
@@ -1161,12 +1157,90 @@ a:hover, a:focus {
 /* 푸터 */
 
 .footer-bg {
-  background-color: purple;
+  background: #ccc linear-gradient(to bottom, #aaa 0%, #ccc 30%, #eee 60%, #fff 70%, #fff 100%);
 }
 .footer {
-  background-color: skyblue;
-  padding: 15px 0;
+  padding: 15px 140px 15px 180px;
+  position: relative;
 }
+
+/* 푸터로고 및 뱃지 */
+
+.footer-logo {
+  position: absolute;
+  top: 45px;
+  left: 40px;
+}
+.tech-logo {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+}
+
+/* 가이드 링크 */
+
+.guide {
+  background: #555;
+  color: white;
+  border-radius: 20px;
+  padding: 2px 15px;
+  display: flex;
+  justify-content: space-around;
+}
+.guide a {
+  display: block;
+  padding: 5px 10px;
+  text-transform: capitalize;
+}
+
+/* 주소 및 저작권 */
+
+address {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* .footer-bg {
+  background: linear-gradient(to bottom, #aaa 0%, #ccc 30%, #eee 60%, #fff 70%, #fff 100%);
+}
+.footer {
+  padding: 30px 35px 25px 180px;
+  position: relative;
+}
+.footer-logo {
+  display: inline-block;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+.guide {
+  display: inline-block;
+  background-color: #555;
+  border-radius: 30px;
+  padding: 0 15px;
+}
+.guide li {
+  display: inline-block;
+  color: white;
+}
+.guide li a {
+  display: inline-block;
+  padding: 10px 20px;
+}
+.footer address {
+  text-align: justify;
+}
+.footer address span {
+  display: inline-block;
+  line-height: 40px;
+}
+.tech-logo {
+  position: absolute;
+  top: 30px;
+  right: -20px;
+} */
+
 
 /*
 .icon-search:before { content: '\e800'; } 
